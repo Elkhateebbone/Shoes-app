@@ -1,13 +1,198 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "~bootstrap/dist/css/bootstrap.min.css";
+.icon-right {
+    position: relative;
+  }
+  
+  .icon-right .icon {
+    position: absolute;
+    right: 0;
+  }
+  .icon-heart {
+    color: white;
+    position: relative;
+  }
+  .tab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .tabs {
+    display: flex;
+    flex-direction: row;
+  }
+  .tab {
+    padding: 8px 16px;
+    margin: 0 8px 0 0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+  }
+  .tab.active {
+    background-color: #fff;
+    border-right: 1px solid #fff;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  /* Product styles */
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ */
+  .icon-heart::before {
+    content: '\f004';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    color: black;
+  }
+  .icon-cart {
+    color: white;
+    position: relative;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the navbar is above other content */
+  }
+  .shopping-cart {
+    position: relative;
+    z-index: 999; /* Ensure the shopping cart is above other elements */
+  }
+  .shop {
+    text-align: center; /* Center the content inside the shop container */
+    margin-top: 80px; /* Add margin to the top to account for the fixed navbar */
+  }
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 100px; /* Add margin on the left and right sides */
+  }
+  .cart-icon {
+    margin-left: 10px; /* Adjust the margin as needed */
+  }
+  .addToCartButton {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .cart-item-image {
+    max-width: 300px; /* Set the maximum width of the image */
+    max-height: 400px; /* Set the maximum height of the image */
+  }
+  .addToCartButton:hover {
+    background-color: black;
+    color: white;
+  }
+  .cart-icon-svg {
+    position: relative;
+    left: -5px; /* Adjust the left position as needed */
+  }
+  
+  .links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .cart-link {
+    margin-left: 20px; /* Adjust the margin as needed */
+  }
+  
+  .shop {
+    /* Add styles for the shop container */
+  }
+  
+  .shopTitle {
+    /* Add styles for the shop title */
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .product {
+    width: calc(33.33% - 10px); /* Set the width of each product to one-third minus margin */
+      margin-bottom: 20px; /* Add margin between products */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .product .productImage {
+    height: 200px; /* Set a fixed height for the image container */
+    width: 100%;
+    overflow: hidden; /* Ensure the image doesn't overflow its container */
+  }
+  .product img {
+      height: 100%; /* Make the image fill its container */
+      width: auto;
+      object-fit: cover; /* Maintain aspect ratio and cover the container */
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9; /* Set the background color of the body */
+  }
+  .product img {
+    width: 100%; /* Make the image fill the container */
+  }
+  
+  .product .description {
+    /* Add styles for the description */
+  }
+  
+  
+  .icon-cart::before {
+    content: '\f07a';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    color: black;
+  }
+  .sidebar {
+    border-right: 1px solid #ddd; /* Border on the right side */
+  }
+  
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    padding-top: 3.5rem;
+    overflow-x: hidden;
+  }
+  
+  .content {
+    margin-left: 16.25rem; /* Adjust this value to match the width of the sidebar */
+    padding: 2rem;
+  }
+  
